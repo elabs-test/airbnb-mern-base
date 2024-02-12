@@ -1,1 +1,1 @@
-# elabs-repo-template
+# airbnb_mern_base

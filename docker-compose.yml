@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  airbnb-api:
+    image: airbnb-api
+    build: ./backend
+    container_name: airbnb_api
+    init: true
+    networks:
+      - frontend
+    ports:
+      - "3000:3000"
+  airbnb-client:
+    image: airbnb-client
+    build: ./frontend
+    container_name: airbnb_client
+    init: true
+    volumes:
+      - ./frontend:/usr/src/app
+    networks:
+      - frontend
+    ports:
+      - "8080:8080"
+networks:
+  frontend:
