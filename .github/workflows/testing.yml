@@ -1,0 +1,28 @@
+name: Run ascendev actions
+
+on:
+ push:
+   branches: ["stages/dev"]
+
+jobs:
+  ascendev:
+    runs-on: ubuntu-20.04
+    timeout-minutes: 10
+    name: Check pull requests
+    
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v3
+      
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      
+      - name: Run custom action
+        uses: tamerlantian01/docker-action-test@v1.9
+        with:
+          base-url: 'https://a29b-191-106-168-4.ngrok-free.app'
+
+
+
