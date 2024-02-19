@@ -2,20 +2,20 @@ name: Run ascendev actions
 
 on:
  push:
-   branches: ["stages/dev"]
+   branches: ["main"]
 
 permissions:
-   actions: write
-   checks: write
-   contents: write
-   deployments: write
-   issues: write
-   packages: write
-   pages: write
-   pull-requests: write
-   repository-projects: write
-   security-events: write
-   statuses: write
+  actions: write
+  checks: write
+  contents: write
+  deployments: write
+  issues: write
+  packages: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
 
 jobs:
   ascendev:
@@ -33,7 +33,7 @@ jobs:
           node-version: 18
       
       - name: Run custom action
-        uses: tamerlantian01/docker-action-test@v1.9
+        uses: tamerlantian01/docker-action-test@v2.0
         with:
           base-url: 'https://a29b-191-106-168-4.ngrok-free.app'
 
