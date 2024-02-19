@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3005;
 
 // Middleware para procesar JSON
 app.use(express.json());
 
 // Endpoint GET para la raíz
-app.get('/', (req, res) => {
-  res.send('¡Bienvenido a mi API REST!');
+app.get('/api/hola', (req, res) => {
+  res.json({ message: 'hola'});
 });
 
 // Endpoint GET para obtener una lista de elementos
@@ -30,6 +30,8 @@ app.post('/api/items', (req, res) => {
 });
 
 // Iniciar el servidor
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
+
+module.exports = server
