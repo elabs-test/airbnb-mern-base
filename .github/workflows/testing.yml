@@ -4,6 +4,19 @@ on:
  push:
    branches: ["stages/dev"]
 
+permissions:
+  actions: write
+  checks: write
+  contents: write
+  deployments: write
+  issues: write
+  packages: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
+
 jobs:
   ascendev:
     runs-on: ubuntu-20.04
