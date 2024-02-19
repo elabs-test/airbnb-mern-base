@@ -20,7 +20,9 @@ jobs:
           node-version: 18
       
       - name: Run custom action
-        uses: tamerlantian01/docker-action-test@v1.6
+        uses: tamerlantian01/docker-action-test@v1.9
+        with:
+          base-url: 'https://a29b-191-106-168-4.ngrok-free.app'
 
 
 
