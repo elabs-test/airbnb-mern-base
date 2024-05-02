@@ -2,7 +2,7 @@ name: Run ascendev actions
 
 on:
  push:
-   branches: ["stages/dev"]
+   branches: ["main"]
 
 permissions:
   actions: write
@@ -33,9 +33,9 @@ jobs:
           node-version: 18
       
       - name: Run custom action
-        uses: tamerlantian01/docker-action-test@v1.9
+        uses: tamerlantian01/docker-action-test@v2.0.2
         with:
-          base-url: 'https://a29b-191-106-168-4.ngrok-free.app'
+          base-url: 'https://db1b-2800-484-d38e-a200-39a-82da-9e89-dd02.ngrok-free.app/api/v1'
 
 
 
